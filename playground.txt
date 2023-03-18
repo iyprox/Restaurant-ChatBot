@@ -1,0 +1,18 @@
+app.post('/menu', (req, res) => {
+  const items = [
+    { id: 1, name: 'Pizza', price: 10 },
+    { id: 2, name: 'Burger', price: 8 },
+    { id: 3, name: 'Salad', price: 6 },
+  ];
+
+  const message = 'Please select an item:\n';
+  items.forEach((item) => {
+    message += `${item.id}. ${item.name} ($${item.price})\n`;
+  });
+
+  const session = getSession(req.body.deviceId);
+  session.state = 'ordering';
+  session.order = [];
+
+  res.json({ message });
+});

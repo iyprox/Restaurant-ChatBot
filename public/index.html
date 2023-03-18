@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choice Kitchen Bot</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-box">
+        <div class="chat-header">
+          <h1>Choice Kitchen Chatbot</h1>
+        </div>
+        <!-- Messages Div -->
+        <div id="messages" , class="chat-messages"></div>
+        <!--Form to submit message -->
+        <div class="chat-input">
+          <form id="chat-form">
+            <input
+              id="messageInput"
+              type="text"
+              placeholder="Type your option..."
+              autocomplete="off"
+            />
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Socket.io -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!--External JS -->
+    <script src="./main.js"></script>
+  </body>
+</html>
